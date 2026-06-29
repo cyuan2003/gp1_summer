@@ -119,6 +119,55 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &203666204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 203666205}
+  - component: {fileID: 203666206}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &203666205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203666204}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 761974679}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &203666206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203666204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af6d24f341a849788bb6b860c7569d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: db506406932dab741a579df650208a6b, type: 2}
+  resources: {fileID: 616410370}
+  map: {fileID: 545292302}
+  currentTurn: 1
+  phase: 0
 --- !u!1 &218378097
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,8 +395,9 @@ GameObject:
   - component: {fileID: 423139888}
   - component: {fileID: 423139887}
   - component: {fileID: 423139886}
+  - component: {fileID: 423139889}
   m_Layer: 0
-  m_Name: Territory_3
+  m_Name: Territory_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -442,6 +492,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423139884}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &423139889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423139884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb739a9bcf634be0adb3147cd645e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 4d1ec6495f0cacc429fab746d6d51aa7, type: 2}
+  map: {fileID: 545292302}
+  game: {fileID: 203666206}
+  body: {fileID: 423139887}
+  untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
+  capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}
 --- !u!1 &437143359
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,8 +894,9 @@ GameObject:
   - component: {fileID: 527704445}
   - component: {fileID: 527704444}
   - component: {fileID: 527704443}
+  - component: {fileID: 527704446}
   m_Layer: 0
-  m_Name: Territory_2
+  m_Name: Territory_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -921,6 +991,73 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527704441}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &527704446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527704441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb739a9bcf634be0adb3147cd645e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: b12a3ebb26c21d14ea254a6826c963e6, type: 2}
+  map: {fileID: 545292302}
+  game: {fileID: 203666206}
+  body: {fileID: 527704444}
+  untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
+  capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}
+--- !u!1 &545292300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545292301}
+  - component: {fileID: 545292302}
+  m_Layer: 0
+  m_Name: MapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &545292301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545292300}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 761974679}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &545292302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545292300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868eea27745814c948a18093a4545b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allTerritories: []
+  startTerritory: {fileID: 11400000, guid: ab5b858691cae6b428bef4fb4a1595be, type: 2}
+  raidProgressLoss: 10
+  raidResourceLoss: 5
 --- !u!1 &564320015
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,8 +1123,9 @@ GameObject:
   - component: {fileID: 595859810}
   - component: {fileID: 595859809}
   - component: {fileID: 595859808}
+  - component: {fileID: 595859811}
   m_Layer: 0
-  m_Name: Territory_4
+  m_Name: Territory_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1082,6 +1220,69 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595859806}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &595859811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595859806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb739a9bcf634be0adb3147cd645e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 69a179bb2cc889c49883eb7a7b845ca1, type: 2}
+  map: {fileID: 545292302}
+  game: {fileID: 203666206}
+  body: {fileID: 595859809}
+  untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
+  capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}
+--- !u!1 &616410368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 616410369}
+  - component: {fileID: 616410370}
+  m_Layer: 0
+  m_Name: ResourceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &616410369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616410368}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 761974679}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &616410370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616410368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0857da8b74ff4a52af33f9b264199ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &672675308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,8 +1469,9 @@ GameObject:
   - component: {fileID: 698523752}
   - component: {fileID: 698523751}
   - component: {fileID: 698523750}
+  - component: {fileID: 698523753}
   m_Layer: 0
-  m_Name: Territory_1
+  m_Name: Territory_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1364,6 +1566,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698523748}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &698523753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698523748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb739a9bcf634be0adb3147cd645e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: dcd812ad89a80f34abd212e8ef824287, type: 2}
+  map: {fileID: 545292302}
+  game: {fileID: 203666206}
+  body: {fileID: 698523751}
+  untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
+  capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}
 --- !u!1 &711918311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,7 +1599,7 @@ GameObject:
   - component: {fileID: 711918313}
   - component: {fileID: 711918316}
   m_Layer: 0
-  m_Name: Territory_0
+  m_Name: Territory_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1485,13 +1706,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb739a9bcf634be0adb3147cd645e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
-  map: {fileID: 0}
-  game: {fileID: 0}
-  body: {fileID: 0}
+  data: {fileID: 11400000, guid: 3c43cdf7a0d531748b72f7e018c7905d, type: 2}
+  map: {fileID: 545292302}
+  game: {fileID: 203666206}
+  body: {fileID: 711918314}
   untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
   capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}
+--- !u!1 &761974678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761974679}
+  m_Layer: 0
+  m_Name: gamebasic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &761974679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761974678}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.867004, y: -8.863898, z: -10.623182}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 203666205}
+  - {fileID: 545292301}
+  - {fileID: 616410369}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &811555193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2225,7 +2480,7 @@ GameObject:
   - component: {fileID: 2002453633}
   - component: {fileID: 2002453630}
   m_Layer: 0
-  m_Name: Territory_5
+  m_Name: Territory_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2332,10 +2587,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb739a9bcf634be0adb3147cd645e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
-  map: {fileID: 0}
-  game: {fileID: 0}
-  body: {fileID: 0}
+  data: {fileID: 11400000, guid: ab5b858691cae6b428bef4fb4a1595be, type: 2}
+  map: {fileID: 545292302}
+  game: {fileID: 203666206}
+  body: {fileID: 2002453631}
   untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
   capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}
@@ -2884,3 +3139,4 @@ SceneRoots:
   - {fileID: 2125734438}
   - {fileID: 218378100}
   - {fileID: 1977264277}
+  - {fileID: 761974679}
