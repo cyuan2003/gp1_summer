@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 423139887}
   - component: {fileID: 423139886}
   m_Layer: 0
-  m_Name: Cube (9)
+  m_Name: Territory_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -534,8 +534,10 @@ MonoBehaviour:
   group: {fileID: 0}
   textLabel: {fileID: 298569388}
   lines:
-  - hi
+  - how are you
+  - I'm fine
   - thank you
+  - and you?
   beginOnEnable: 1
   onFinished:
     m_PersistentCalls:
@@ -824,7 +826,7 @@ GameObject:
   - component: {fileID: 527704444}
   - component: {fileID: 527704443}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: Territory_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -985,7 +987,7 @@ GameObject:
   - component: {fileID: 595859809}
   - component: {fileID: 595859808}
   m_Layer: 0
-  m_Name: Cube (10)
+  m_Name: Territory_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1091,8 +1093,8 @@ GameObject:
   - component: {fileID: 672675311}
   - component: {fileID: 672675310}
   - component: {fileID: 672675309}
+  - component: {fileID: 672675315}
   - component: {fileID: 672675312}
-  - component: {fileID: 672675313}
   - component: {fileID: 672675314}
   m_Layer: 0
   m_Name: Main Camera
@@ -1219,18 +1221,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &672675313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672675308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c0d938fb84bb431faea25a8876a47d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &672675314
 Animator:
   serializedVersion: 7
@@ -1253,6 +1243,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &672675315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672675308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64ccebfbc986498eb18f587e80e5f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 672675310}
 --- !u!1 &698523748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,7 +1269,7 @@ GameObject:
   - component: {fileID: 698523751}
   - component: {fileID: 698523750}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: Territory_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1373,8 +1376,9 @@ GameObject:
   - component: {fileID: 711918315}
   - component: {fileID: 711918314}
   - component: {fileID: 711918313}
+  - component: {fileID: 711918316}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Territory_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1469,6 +1473,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711918311}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &711918316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711918311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb739a9bcf634be0adb3147cd645e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+  map: {fileID: 0}
+  game: {fileID: 0}
+  body: {fileID: 0}
+  untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
+  capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}
 --- !u!1 &811555193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,9 +2222,10 @@ GameObject:
   - component: {fileID: 2002453629}
   - component: {fileID: 2002453632}
   - component: {fileID: 2002453631}
+  - component: {fileID: 2002453633}
   - component: {fileID: 2002453630}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Territory_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2296,6 +2320,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002453628}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2002453633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002453628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb739a9bcf634be0adb3147cd645e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+  map: {fileID: 0}
+  game: {fileID: 0}
+  body: {fileID: 0}
+  untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
+  capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}
 --- !u!1 &2024153120
 GameObject:
   m_ObjectHideFlags: 0
