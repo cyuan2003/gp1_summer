@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
@@ -8,18 +7,24 @@ public class TextSequence : MonoBehaviour
     public CanvasGroup group;
     public TMP_Text textLabel;
     [TextArea] public string[] lines;
+    public bool beginOnEnable = true;
     public UnityEvent onFinished;
 
     private int index = 0;
     private bool running = false;
+
+    void OnEnable()
+    {
+        if (beginOnEnable)
+            Begin();
+    }
 
     public void Begin()
     {
         if (lines.Length == 0) { Finish(); return; }
         index = 0;
         running = true;
-        group.gameObject.SetActive(true);
-        group.alpha = 1f;
+        if (group != null) group.alpha = 1f;
         Show();
     }
 
@@ -50,7 +55,7 @@ public class TextSequence : MonoBehaviour
     void Finish()
     {
         running = false;
-        group.gameObject.SetActive(false);
         onFinished.Invoke();
+        gameObject.SetActive(false);
     }
 }
