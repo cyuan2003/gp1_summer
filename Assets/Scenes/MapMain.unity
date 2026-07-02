@@ -1054,7 +1054,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 868eea27745814c948a18093a4545b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allTerritories: []
+  allTerritories:
+  - {fileID: 11400000, guid: ab5b858691cae6b428bef4fb4a1595be, type: 2}
+  - {fileID: 11400000, guid: 3c43cdf7a0d531748b72f7e018c7905d, type: 2}
+  - {fileID: 11400000, guid: dcd812ad89a80f34abd212e8ef824287, type: 2}
+  - {fileID: 11400000, guid: b12a3ebb26c21d14ea254a6826c963e6, type: 2}
+  - {fileID: 11400000, guid: 4d1ec6495f0cacc429fab746d6d51aa7, type: 2}
+  - {fileID: 11400000, guid: 69a179bb2cc889c49883eb7a7b845ca1, type: 2}
   startTerritory: {fileID: 11400000, guid: ab5b858691cae6b428bef4fb4a1595be, type: 2}
   raidProgressLoss: 10
   raidResourceLoss: 5
