@@ -694,7 +694,7 @@ MonoBehaviour:
   game: {fileID: 203666206}
   body: {fileID: 423139887}
   cardView: {fileID: 1566529544}
-  testCard: {fileID: 0}
+  testCard: {fileID: 11400000, guid: bcabb6dad638c3d449145c609b2d77cd, type: 2}
   untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
   capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   game: {fileID: 203666206}
   body: {fileID: 527704444}
   cardView: {fileID: 1566529544}
-  testCard: {fileID: 0}
+  testCard: {fileID: 11400000, guid: de370934cd17160468b88a503cae0c72, type: 2}
   untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
   capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}
@@ -1432,7 +1432,7 @@ MonoBehaviour:
   game: {fileID: 203666206}
   body: {fileID: 595859809}
   cardView: {fileID: 1566529544}
-  testCard: {fileID: 0}
+  testCard: {fileID: 11400000, guid: 4e3d154e281f7094ab479aa47239e3d0, type: 2}
   untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
   capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}
@@ -1910,7 +1910,7 @@ MonoBehaviour:
   game: {fileID: 203666206}
   body: {fileID: 711918314}
   cardView: {fileID: 1566529544}
-  testCard: {fileID: 0}
+  testCard: {fileID: 11400000, guid: 3e9884d68eef8b741b2595a1da730f9d, type: 2}
   untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
   capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}
@@ -2455,10 +2455,10 @@ MonoBehaviour:
   game: {fileID: 203666206}
   card: {fileID: 1566529540}
   group: {fileID: 123656889}
-  sourceText: {fileID: 0}
+  sourceText: {fileID: 120001316}
   promptText: {fileID: 120001316}
-  leftText: {fileID: 0}
-  rightText: {fileID: 0}
+  leftText: {fileID: 120001316}
+  rightText: {fileID: 120001316}
   threshold: 200
 --- !u!1 &1692837318
 GameObject:
@@ -2952,7 +2952,7 @@ MonoBehaviour:
   game: {fileID: 203666206}
   body: {fileID: 2002453631}
   cardView: {fileID: 1566529544}
-  testCard: {fileID: 0}
+  testCard: {fileID: 11400000, guid: ca270eba68a20044c8bf0a2b5df5ce07, type: 2}
   untouchedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   attackingColor: {r: 0.78, g: 0.6, b: 0.2, a: 1}
   capturedColor: {r: 0.23, g: 0.39, b: 0.57, a: 1}

@@ -35,6 +35,7 @@ public class CardDragView : MonoBehaviour
         group.alpha = 1f;
         group.interactable = true;
         group.blocksRaycasts = true;
+        Debug.Log("Show called");
     }
 
     void Hide()
