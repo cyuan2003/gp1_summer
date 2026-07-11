@@ -13,6 +13,7 @@ public class ResourceManager : MonoBehaviour
         values[ResourceType.Troops] = config.startTroops;
         values[ResourceType.Supplies] = config.startSupplies;
         values[ResourceType.Morale] = config.startMorale;
+        values[ResourceType.Spirit] = config.startSpirit;
         OnChanged?.Invoke();
     }
 
@@ -32,6 +33,7 @@ public class ResourceManager : MonoBehaviour
         values[ResourceType.Troops] += effect.troopsDelta;
         values[ResourceType.Supplies] += effect.suppliesDelta;
         values[ResourceType.Morale] += effect.moraleDelta;
+        values[ResourceType.Spirit] += effect.spiritDelta;
         OnChanged?.Invoke();
     }
 
@@ -39,6 +41,7 @@ public class ResourceManager : MonoBehaviour
     {
         return values[ResourceType.Troops] <= 0
             || values[ResourceType.Supplies] <= 0
-            || values[ResourceType.Morale] <= 0;
+            || values[ResourceType.Morale] <= 0
+            || values[ResourceType.Spirit] <= 0;
     }
 }

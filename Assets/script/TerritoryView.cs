@@ -6,8 +6,7 @@ public class TerritoryView : MonoBehaviour
     public MapManager map;
     public GameManager game;
     public Renderer body;
-    public CardDragView cardView;
-    public CardData testCard;
+    public CardManager cardManager;
 
     public Color untouchedColor = Color.gray;
     public Color attackingColor = new Color(0.78f, 0.6f, 0.2f);
@@ -19,7 +18,7 @@ public class TerritoryView : MonoBehaviour
 
         if (state.status == TerritoryStatus.Attacking)
         {
-            cardView.Show(testCard, data);
+            cardManager.OpenFor(data);
             return;
         }
 

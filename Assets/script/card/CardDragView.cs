@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class CardDragView : MonoBehaviour
@@ -6,11 +8,14 @@ public class CardDragView : MonoBehaviour
     public GameManager game;
     public RectTransform card;
     public CanvasGroup group;
+    public Image artwork;
     public TMP_Text sourceText;
     public TMP_Text promptText;
     public TMP_Text leftText;
     public TMP_Text rightText;
     public float threshold = 200f;
+
+    public event Action OnResolved;
 
     private CardData data;
     private TerritoryData territory;
@@ -20,10 +25,10 @@ public class CardDragView : MonoBehaviour
     void Start()
     {
         startPos = card.anchoredPosition;
-        Hide();
+        HideInstant();
     }
 
-    public void Show(CardData cardData, TerritoryData terr)
+    public void Display(CardData cardData, TerritoryData terr)
     {
         data = cardData;
         territory = terr;
@@ -31,14 +36,17 @@ public class CardDragView : MonoBehaviour
         promptText.text = cardData.promptText;
         leftText.text = cardData.leftChoice.label;
         rightText.text = cardData.rightChoice.label;
+
+        if (artwork != null)
+            artwork.sprite = cardData.image;
+
         card.anchoredPosition = startPos;
         group.alpha = 1f;
         group.interactable = true;
         group.blocksRaycasts = true;
-        Debug.Log("Show called");
     }
 
-    void Hide()
+    public void HideInstant()
     {
         group.alpha = 0f;
         group.interactable = false;
@@ -76,6 +84,6 @@ public class CardDragView : MonoBehaviour
     {
         game.ChooseSide(effect, territory);
         card.anchoredPosition = startPos;
-        Hide();
+        OnResolved?.Invoke();
     }
 }

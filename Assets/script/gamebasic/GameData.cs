@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ResourceType { Troops, Supplies, Morale }
+public enum ResourceType { Troops, Supplies, Morale, Spirit }
 public enum CardKind { Request, Raid }
 
 [System.Serializable]
@@ -11,6 +11,7 @@ public struct CardEffect
     public int troopsDelta;
     public int suppliesDelta;
     public int moraleDelta;
+    public int spiritDelta;
     public int attackPower;
     public int nextTurnIncomeBonus;
 }
@@ -21,6 +22,7 @@ public class CardData : ScriptableObject
     public CardKind kind = CardKind.Request;
     public string sourceName;
     [TextArea] public string promptText;
+    public Sprite image;
     public CardEffect leftChoice;
     public CardEffect rightChoice;
     [Range(0f, 1f)] public float baseSuccessChance = 1f;
@@ -44,6 +46,7 @@ public class GameConfig : ScriptableObject
     public int startTroops = 20;
     public int startSupplies = 20;
     public int startMorale = 50;
+    public int startSpirit = 50;
     public int baseTroopsIncome = 5;
     public int baseSuppliesIncome = 5;
     public int cardsPerTerritoryMin = 3;
