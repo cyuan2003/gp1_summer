@@ -18,6 +18,5 @@ MonoBehaviour:
   raidChanceMin: 0.15
   raidChanceMax: 0.3
   neighbors:
-  - {fileID: 11400000, guid: dcd812ad89a80f34abd212e8ef824287, type: 2}
   - {fileID: 11400000, guid: b12a3ebb26c21d14ea254a6826c963e6, type: 2}
   - {fileID: 11400000, guid: ab5b858691cae6b428bef4fb4a1595be, type: 2}

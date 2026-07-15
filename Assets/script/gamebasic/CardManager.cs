@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
+    public CanvasGroup panel;
     public CardDragView cardView;
     public List<CardData> library = new List<CardData>();
     public int drawCount = 5;
@@ -13,6 +14,11 @@ public class CardManager : MonoBehaviour
     void Awake()
     {
         cardView.OnResolved += ShowNext;
+    }
+
+    void Start()
+    {
+        ClosePanel();
     }
 
     public void OpenFor(TerritoryData territory)
@@ -33,14 +39,34 @@ public class CardManager : MonoBehaviour
             }
         }
 
+        OpenPanel();
         ShowNext();
     }
 
     void ShowNext()
     {
         if (hand.Count > 0)
+        {
             cardView.Display(hand.Dequeue(), currentTerritory);
+        }
         else
+        {
             cardView.HideInstant();
+            ClosePanel();
+        }
+    }
+
+    void OpenPanel()
+    {
+        panel.alpha = 1f;
+        panel.interactable = true;
+        panel.blocksRaycasts = true;
+    }
+
+    void ClosePanel()
+    {
+        panel.alpha = 0f;
+        panel.interactable = false;
+        panel.blocksRaycasts = false;
     }
 }
