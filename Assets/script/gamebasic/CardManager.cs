@@ -10,6 +10,7 @@ public class CardManager : MonoBehaviour
 
     private Queue<CardData> hand = new Queue<CardData>();
     private TerritoryData currentTerritory;
+    private HashSet<TerritoryData> usedThisTurn = new HashSet<TerritoryData>();
 
     void Awake()
     {
@@ -21,8 +22,16 @@ public class CardManager : MonoBehaviour
         ClosePanel();
     }
 
+    public bool CanDrawFor(TerritoryData territory)
+    {
+        return !usedThisTurn.Contains(territory);
+    }
+
     public void OpenFor(TerritoryData territory)
     {
+        if (usedThisTurn.Contains(territory)) return;
+        usedThisTurn.Add(territory);
+
         currentTerritory = territory;
         hand.Clear();
 
@@ -41,6 +50,11 @@ public class CardManager : MonoBehaviour
 
         OpenPanel();
         ShowNext();
+    }
+
+    public void ResetTurn()
+    {
+        usedThisTurn.Clear();
     }
 
     void ShowNext()

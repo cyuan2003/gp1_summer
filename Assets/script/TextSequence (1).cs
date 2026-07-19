@@ -18,6 +18,11 @@ public class TextSequence : MonoBehaviour
         if (beginOnEnable)
             Begin();
     }
+    public void BeginWith(string[] customLines)
+    {
+        lines = customLines;
+        Begin();
+    }
 
     public void Begin()
     {

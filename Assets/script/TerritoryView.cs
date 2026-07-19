@@ -7,6 +7,9 @@ public class TerritoryView : MonoBehaviour
     public GameManager game;
     public Renderer body;
     public CardManager cardManager;
+    public TextSequence introDialog;
+
+    private bool introShownForThis = false;
 
     public Color untouchedColor = Color.gray;
     public Color attackingColor = new Color(0.78f, 0.6f, 0.2f);
@@ -23,11 +26,24 @@ public class TerritoryView : MonoBehaviour
         }
 
         int troops = game.resources.Get(ResourceType.Troops);
-        if (map.CanStartAttack(data, troops))
+        if (!map.CanStartAttack(data, troops)) return;
+
+        if (!introShownForThis && introDialog != null && data.introLines.Length > 0)
         {
-            map.StartAttack(data);
-            Refresh();
+            introShownForThis = true;
+            introDialog.onFinished.AddListener(StartAttackNow);
+            introDialog.BeginWith(data.introLines);
+            return;
         }
+
+        StartAttackNow();
+    }
+
+    void StartAttackNow()
+    {
+        introDialog.onFinished.RemoveListener(StartAttackNow);
+        map.StartAttack(data);
+        Refresh();
     }
 
     public void Refresh()

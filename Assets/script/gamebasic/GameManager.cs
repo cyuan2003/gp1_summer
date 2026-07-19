@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public GameConfig config;
     public ResourceManager resources;
     public MapManager map;
+    public CardManager cards;
 
     public int currentTurn = 1;
     public GamePhase phase = GamePhase.Choosing;
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
         if (currentTurn >= config.maxTurns) { Finish(false); return; }
 
         currentTurn++;
+        cards.ResetTurn();
         BeginTurn();
     }
 

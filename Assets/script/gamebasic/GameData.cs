@@ -32,6 +32,7 @@ public class CardData : ScriptableObject
 public class TerritoryData : ScriptableObject
 {
     public string territoryName;
+    [TextArea] public string[] introLines;
     public int defenseValue = 30;
     public int startThreshold = 10;
     [Range(0f, 1f)] public float raidChanceMin = 0.15f;
