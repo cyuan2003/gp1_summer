@@ -16,6 +16,7 @@ public struct CardEffect
     public int nextTurnIncomeBonus;
 }
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "NewCard", menuName = "WarRoom/Card")]
 public class CardData : ScriptableObject
 {

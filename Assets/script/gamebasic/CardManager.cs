@@ -51,7 +51,7 @@ public class CardManager : MonoBehaviour
         OpenPanel();
         ShowNext();
     }
-
+     
     public void ResetTurn()
     {
         usedThisTurn.Clear();
@@ -77,7 +77,7 @@ public class CardManager : MonoBehaviour
         panel.blocksRaycasts = true;
     }
 
-    void ClosePanel()
+    public void ClosePanel()
     {
         panel.alpha = 0f;
         panel.interactable = false;

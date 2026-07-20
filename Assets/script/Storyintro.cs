@@ -1,12 +1,15 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
 
 public class StoryIntro : MonoBehaviour
 {
+    [Header("UI")]
     public TextMeshProUGUI storyText;
-
+    public GameObject storyCanvas;   // 拖入Canvas（或story父物体）
+    public PlayableDirector cameraIntro;
+    [Header("Time")]
     public float startDelay = 1f;
     public float showTime = 2f;
     public float fadeTime = 0.5f;
@@ -38,7 +41,7 @@ public class StoryIntro : MonoBehaviour
     {
         storyText.text = "";
 
-        // 等待1秒
+        // 开始前等待
         yield return new WaitForSeconds(startDelay);
 
         foreach (string line in story)
@@ -59,7 +62,7 @@ public class StoryIntro : MonoBehaviour
                 yield return null;
             }
 
-            // 显示2秒
+            // 显示
             yield return new WaitForSeconds(showTime);
 
             // 淡出
@@ -75,10 +78,14 @@ public class StoryIntro : MonoBehaviour
             yield return new WaitForSeconds(0.3f);
         }
 
-        // 全部结束后等待2秒
+        // 最后等待
         yield return new WaitForSeconds(endDelay);
 
-        // 切换到游戏场景
-        SceneManager.LoadScene("MapMain");
+        // 隐藏整个Canvas（或story父物体）
+        if (storyCanvas != null)
+        {
+            storyCanvas.SetActive(false);
+            cameraIntro.Play();
+        }
     }
 }

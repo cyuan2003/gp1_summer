@@ -19,7 +19,7 @@ public class DismissStoryPanel : MonoBehaviour
         {
             triggered = true;
             storyPanel.SetActive(false);
-            cameraIntro.Play();
+            //cameraIntro.Play();
         }
     }
 }

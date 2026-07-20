@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Card1
+  m_Name: Card5
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   kind: 0
   sourceName: 
   promptText: 
-  image: {fileID: 21300000, guid: 8d5f58d7d70839740b642f97550a6cd3, type: 3}
+  image: {fileID: 21300000, guid: 6d8459bfce5e55b429b5585a1d47eaaf, type: 3}
   leftChoice:
     label: 
     troopsDelta: 0
-    suppliesDelta: 10
-    moraleDelta: 0
-    spiritDelta: 0
+    suppliesDelta: 0
+    moraleDelta: 10
+    spiritDelta: 10
     attackPower: 0
     nextTurnIncomeBonus: 0
   rightChoice:
     label: 
-    troopsDelta: 10
-    suppliesDelta: 0
-    moraleDelta: 10
+    troopsDelta: 0
+    suppliesDelta: 10
+    moraleDelta: 0
     spiritDelta: 0
     attackPower: 0
     nextTurnIncomeBonus: 0

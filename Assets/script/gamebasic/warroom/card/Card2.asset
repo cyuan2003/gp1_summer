@@ -15,10 +15,10 @@ MonoBehaviour:
   kind: 0
   sourceName: 
   promptText: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 391f58b5fcc87c54aa4d8c7058b394b8, type: 3}
   leftChoice:
     label: 
-    troopsDelta: 0
+    troopsDelta: 10
     suppliesDelta: 0
     moraleDelta: 0
     spiritDelta: 0
@@ -30,6 +30,6 @@ MonoBehaviour:
     suppliesDelta: 0
     moraleDelta: 0
     spiritDelta: 0
-    attackPower: 0
+    attackPower: 10
     nextTurnIncomeBonus: 0
   baseSuccessChance: 1

@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public GameConfig config;
     public ResourceManager resources;
     public MapManager map;
-    public CardManager cards;
+    public CardDragView cards;
 
     public int currentTurn = 1;
     public GamePhase phase = GamePhase.Choosing;
@@ -37,19 +37,7 @@ public class GameManager : MonoBehaviour
         pendingIncomeBonus += effect.nextTurnIncomeBonus;
     }
 
-    public void EndTurn()
-    {
-        phase = GamePhase.Resolving;
-        map.ResolveRaids(resources);
-
-        if (map.AllCaptured()) { Finish(true); return; }
-        if (resources.AnyDepleted()) { Finish(false); return; }
-        if (currentTurn >= config.maxTurns) { Finish(false); return; }
-
-        currentTurn++;
-        cards.ResetTurn();
-        BeginTurn();
-    }
+   
 
     void Finish(bool won)
     {
