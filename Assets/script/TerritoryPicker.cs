@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TerritoryPicker : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class TerritoryPicker : MonoBehaviour
         Vector3 screenPos = touched ? (Vector3)Input.GetTouch(0).position : Input.mousePosition;
         Ray ray = cam.ScreenPointToRay(screenPos);
 
-        if (Physics.Raycast(ray, out RaycastHit hit))
+        if (Physics.Raycast(ray, out RaycastHit hit)&&!EventSystem.current.IsPointerOverGameObject())
         {
             TerritoryView view = hit.collider.GetComponent<TerritoryView>();
             if (view != null)

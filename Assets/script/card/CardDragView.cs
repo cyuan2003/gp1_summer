@@ -62,7 +62,7 @@ public class CardDragView : MonoBehaviour
         //print(realMousePos);
 
         
-        if (realMousePos >100)//”“±ﬂ
+        if (realMousePos >100&&canvasGroup.alpha!=0)//”“±ﬂ
         {
             transform.localEulerAngles = new Vector3(0, 0, -realMousePos/ 30);
             LoadRightCardData();
@@ -72,7 +72,7 @@ public class CardDragView : MonoBehaviour
                 NextCard();
             }
         }
-        else if (realMousePos < - 100)//◊Û±ﬂ
+        else if (realMousePos < - 100&& canvasGroup.alpha != 0)//◊Û±ﬂ
         {
             transform.localEulerAngles = new Vector3(0, 0, -realMousePos / 30);
             LoadLeftCardData();

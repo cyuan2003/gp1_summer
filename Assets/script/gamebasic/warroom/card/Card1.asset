@@ -15,21 +15,21 @@ MonoBehaviour:
   kind: 0
   sourceName: 
   promptText: 
-  image: {fileID: 21300000, guid: 8d5f58d7d70839740b642f97550a6cd3, type: 3}
+  image: {fileID: 21300000, guid: dfa2afd196c460742933eceef9d7cc40, type: 3}
   leftChoice:
-    label: 
+    label: houqin
     troopsDelta: 0
-    suppliesDelta: 10
+    suppliesDelta: 6
     moraleDelta: 0
-    spiritDelta: 0
+    spiritDelta: -5
     attackPower: 0
     nextTurnIncomeBonus: 0
   rightChoice:
     label: 
-    troopsDelta: 10
-    suppliesDelta: 0
-    moraleDelta: 10
-    spiritDelta: 0
+    troopsDelta: 0
+    suppliesDelta: -3
+    moraleDelta: 0
+    spiritDelta: 3
     attackPower: 0
     nextTurnIncomeBonus: 0
   baseSuccessChance: 1

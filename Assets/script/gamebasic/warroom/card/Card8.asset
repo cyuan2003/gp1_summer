@@ -15,19 +15,19 @@ MonoBehaviour:
   kind: 0
   sourceName: 
   promptText: 
-  image: {fileID: 21300000, guid: 8d5f58d7d70839740b642f97550a6cd3, type: 3}
+  image: {fileID: 21300000, guid: 9cd42991725dd664f889e4357f700772, type: 3}
   leftChoice:
-    label: 
-    troopsDelta: 0
-    suppliesDelta: 0
-    moraleDelta: 10
-    spiritDelta: 10
+    label: xiuqiao
+    troopsDelta: 3
+    suppliesDelta: -5
+    moraleDelta: 0
+    spiritDelta: 0
     attackPower: 0
     nextTurnIncomeBonus: 0
   rightChoice:
     label: 
-    troopsDelta: 0
-    suppliesDelta: 10
+    troopsDelta: -3
+    suppliesDelta: 2
     moraleDelta: 0
     spiritDelta: 0
     attackPower: 0

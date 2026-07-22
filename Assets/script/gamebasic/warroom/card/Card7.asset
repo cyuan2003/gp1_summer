@@ -15,21 +15,21 @@ MonoBehaviour:
   kind: 0
   sourceName: 
   promptText: 
-  image: {fileID: 21300000, guid: fa5f76ef79913394793ab1c308fec417, type: 3}
+  image: {fileID: 21300000, guid: d47c0dc84b83f7b43a9349203b61b4b3, type: 3}
   leftChoice:
-    label: 
-    troopsDelta: 0
+    label: yexi
+    troopsDelta: 5
     suppliesDelta: 0
-    moraleDelta: 10
-    spiritDelta: 10
+    moraleDelta: 6
+    spiritDelta: 0
     attackPower: 0
     nextTurnIncomeBonus: 0
   rightChoice:
     label: 
     troopsDelta: 0
-    suppliesDelta: 10
-    moraleDelta: 0
-    spiritDelta: 0
+    suppliesDelta: 0
+    moraleDelta: -5
+    spiritDelta: -3
     attackPower: 0
     nextTurnIncomeBonus: 0
   baseSuccessChance: 1

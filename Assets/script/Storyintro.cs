@@ -1,7 +1,9 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.UI;
 
 public class StoryIntro : MonoBehaviour
 {
@@ -16,7 +18,8 @@ public class StoryIntro : MonoBehaviour
     public float endDelay = 2f;
 
     private bool hasPlayed = false;
-
+    public List<Sprite> bgs;
+    Image image;
     string[] story =
     {
         "The war has reached a stalemate,\nand enemy forces hold key positions.",
@@ -30,11 +33,13 @@ public class StoryIntro : MonoBehaviour
 
     void Start()
     {
+        image = GetComponent<Image>();
         if (!hasPlayed)
         {
             hasPlayed = true;
             StartCoroutine(PlayStory());
         }
+
     }
 
     IEnumerator PlayStory()
@@ -43,11 +48,12 @@ public class StoryIntro : MonoBehaviour
 
         // 开始前等待
         yield return new WaitForSeconds(startDelay);
-
+        int index = 0;
         foreach (string line in story)
         {
             storyText.text = line;
-
+            image.sprite = bgs[index];
+            index++;
             Color c = storyText.color;
             c.a = 0;
             storyText.color = c;
@@ -85,7 +91,7 @@ public class StoryIntro : MonoBehaviour
         if (storyCanvas != null)
         {
             storyCanvas.SetActive(false);
-            cameraIntro.Play();
+            //cameraIntro.Play();
         }
     }
 }
